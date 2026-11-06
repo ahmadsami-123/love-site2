@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة لكِ ياجوجو ياحبيبتي</title>
+    <!-- خطوط عربية مميزة مثل بالفيديو -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@400;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./me.css">
+</head>
+<body>
+
+    <!-- مؤشرات التنقل الجانبية -->
+    <div class="nav-dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+    </div>
+
+    <div class="main-container">
+        
+        <!-- القسم الأول: زر القلب التفاعلي -->
+        <section class="page-section" id="section1">
+            <div class="top-tag">بعتلها رابط بدل وردة 🌹 وهيك فتحو 👀</div>
+            
+            <h1 class="main-heading">بحبك... وهي مش آخر رسالة</h1>
+            
+            <div class="heart-container" id="heartBtn">
+                <div class="heart-shape">
+                    <span class="heart-dot"></span>
+                </div>
+            </div>
+
+            <div class="heart-counter-text" id="counterText">اضغطي على القلب</div>
+
+            <a href="https://wa.me/?text=بحبك حب مش طبيعي وبعشقك عشق ولهان ومالي غيرك بهالدنيا ياحبي انتي" target="_blank" rel="noopener" class="whatsapp-btn">
+                <span>💬</span> ردي على الرسالة
+            </a>
+
+            <div class="scroll-hint">اقرئيها من جديد ⬇</div>
+        </section>
+
+        <!-- القسم الثاني: الرسالة على الورقة المسطّرة -->
+        <section class="page-section" id="section2">
+            <div class="section-tag">رسالة باسمها... بتنكتب كلمة كلمة ✍️</div>
+            
+            <div class="paper-card">
+                <div class="paper-header">
+                    <span class="location-date">دمشق، ١٤ شباط</span>
+                </div>
+                <div class="paper-body">
+                    <div class="typed-content" id="typedMessage"></div>
+                </div>
+                <div class="paper-footer">
+                    <span class="signature-text">حبيبتك للأبد،</span>
+                    <span class="footer-heart">❤️</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الثالث: عدّاد الحب -->
+        <section class="page-section" id="section3">
+            <div class="section-tag">⏳ وعدّاد من أول يوم</div>
+            
+            <div class="counter-card">
+                <div class="counter-header-text">صرلنا مع بعض ❤️</div>
+                
+                <div class="days-hero" id="daysVal">1328</div>
+                <div class="days-label">يوم</div>
+
+                <div class="time-row">
+                    <div class="time-unit">
+                        <span class="unit-val" id="secVal">00</span>
+                        <span class="unit-lbl">ثانية</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="unit-val" id="minVal">00</span>
+                        <span class="unit-lbl">دقيقة</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="unit-val" id="hourVal">00</span>
+                        <span class="unit-lbl">ساعة</span>
+                    </div>
+                </div>
+
+                <div class="start-date-footer">من ١٢ آذار ٢٠٢٥</div>
+            </div>
+        </section>
+ 
+        <!-- القسم الرابع: كروت "ليش بحبك" -->
+        <section class="page-section" id="section4">
+            <div class="reasons-header-box">
+                <div class="small-sub">ليش بحبك؟</div>
+                <div class="reasons-main-title">لأنك... <br> <span>وكل شي بتحبو فيها</span></div>
+            </div>
+
+            <div class="cards-stack-wrapper">
+                <div class="reason-card" id="reasonCard">
+                    <div class="card-num" id="cardNum">١</div>
+                    <div class="card-text" id="cardText">ضحكتك بتنسيني تعب اليوم كله</div>
+                    <div class="card-heart">❤️</div>
+                </div>
+            </div>
+
+            <div class="cards-indicator" id="cardsProgress">١ من ٦</div>
+        </section>
+
+    </div>
+
+    <script defer src="./me.js"></script>
+</body>
+</html>

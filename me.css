@@ -1,0 +1,346 @@
+:root {
+    --bg-dark: #3b0e1a;
+    --bg-card: #fdfbf7;
+    --primary-red: #c92a48;
+    --accent-light: #fbebf0;
+    --text-dark: #2b2b2b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark);
+    font-family: 'Cairo', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* مؤشرات التنقل الجانبية */
+.nav-dots {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.4);
+}
+
+/* التصفح بالسكرول الناعم 100vh */
+.main-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.page-section {
+    width: 100%;
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 30px 20px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Tag أعلى الأقسام */
+.top-tag, .section-tag {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-red);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.main-heading {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 26px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+/* زر القلب */
+.heart-container {
+    width: 140px;
+    height: 140px;
+    background-color: var(--primary-red);
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 40px 0 50px 0;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heart-container::before,
+.heart-container::after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    background-color: var(--primary-red);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-container::before {
+    top: -70px;
+    left: 0;
+}
+
+.heart-container::after {
+    left: 70px;
+    top: 0;
+}
+
+.heart-container:active {
+    transform: rotate(-45deg) scale(0.92);
+}
+
+.heart-counter-text {
+    font-size: 18px;
+    color: var(--accent-light);
+    margin-top: 15px;
+    min-height: 28px;
+}
+
+.whatsapp-btn {
+    background: var(--primary-red);
+    color: #fff;
+    width: 90%;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 20px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* الورقة المسطّرة */
+.paper-card {
+    background: var(--bg-card);
+    width: 100%;
+    border-radius: 14px;
+    padding: 25px 20px;
+    color: var(--text-dark);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    text-align: right;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: repeating-linear-gradient(var(--bg-card) 0px, var(--bg-card) 31px, #e8e2d9 32px);
+}
+
+.paper-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    font-size: 13px;
+    color: #777;
+}
+
+.paper-body {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.typed-content {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 22px;
+    line-height: 32px;
+    color: #222;
+    white-space: pre-wrap;
+}
+
+.paper-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.signature-text {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 18px;
+    color: var(--primary-red);
+}
+
+.footer-heart {
+    color: var(--primary-red);
+    font-size: 20px;
+}
+
+/* كارت العداد */
+.counter-card {
+    background: var(--bg-card);
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: var(--text-dark);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.counter-header-text {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.days-hero {
+    font-family: 'Cairo', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--primary-red);
+    line-height: 1;
+}
+
+.days-label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.time-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.time-unit {
+    border: 1px solid #e2dcd5;
+    border-radius: 10px;
+    padding: 10px 14px;
+    min-width: 75px;
+    background: #fff;
+}
+
+.unit-val {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.unit-lbl {
+    font-size: 12px;
+    color: #777;
+}
+
+.start-date-footer {
+    font-size: 13px;
+    color: #888;
+}
+
+/* قسم كروت ليش بحبك */
+.reasons-header-box {
+    margin-bottom: 25px;
+}
+
+.small-sub {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.reasons-main-title {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.cards-stack-wrapper {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reason-card {
+    background: var(--bg-card);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 30px 20px;
+    color: var(--text-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-num {
+    font-family: 'Aref Ruqaa', serif;
+    color: var(--primary-red);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card-text {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #222;
+}
+
+.card-heart {
+    color: var(--primary-red);
+    font-size: 18px;
+}
+
+.cards-indicator {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
